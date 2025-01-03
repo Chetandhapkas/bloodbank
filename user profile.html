@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Slightly lighter background */
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d70000;
+            margin-bottom: 20px;
+            font-size: 2em; /* Larger font size for the title */
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Image Styles */
+        .profile-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 150px; /* Image width */
+            height: 150px; /* Image height */
+            border-radius: 50%; /* Circular image */
+            border: 2px solid #d70000; /* Border color */
+            object-fit: cover; /* Ensure image covers the box */
+        }
+
+        /* Profile Info Styles */
+        .profile-info {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eaeaea; /* Separator line */
+            padding-bottom: 10px; /* Spacing below each info block */
+        }
+
+        .profile-info label {
+            font-weight: bold;
+            display: block; /* Makes labels stand out */
+            margin-bottom: 5px; /* Spacing below labels */
+        }
+
+        .profile-info p {
+            margin: 0; /* Remove default margin for paragraphs */
+        }
+
+        /* Button Styles */
+        .home-button {
+            display: block; /* Center the button */
+            width: 100%; /* Full width button */
+            padding: 12px 0; /* Padding for button */
+            font-size: 16px;
+            color: white;
+            background-color: #d70000; /* Button color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 20px; /* Spacing above the button */
+        }
+
+        .home-button:hover {
+            background-color: #b30000; /* Darker red on hover */
+        }
+
+        .home-button:active {
+            transform: translateY(1px); /* Slight press effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Doctor Profile</h1>
+    <div class="container">
+        <div class="profile-image">
+            <img src="https://media.istockphoto.com/id/2077095666/vector/default-placeholder-doctor-portrait-photo-avatar-on-gray-background-greyscale-healthcare.jpg?s=612x612&w=0&k=20&c=en2o7NAtzp_udRQhckeWozkwHiXGz5KCRhTzY3Vbhdo=" alt="Dr. John Doe">
+        </div>
+        
+        <div class="profile-info">
+            <label for="name">Full Name:</label>
+            <p id="name">Dr. John Doe</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="specialization">Specialization:</label>
+            <p id="specialization">Hematology</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="mobile">Mobile Number:</label>
+            <p id="mobile">+1234567890</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="email">Email Address:</label>
+            <p id="email">johndoe@example.com</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="hospital">Affiliated Hospital:</label>
+            <p id="hospital">Springfield General Hospital</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="address">Clinic Address:</label>
+            <p id="address">456 Elm St, Springfield, USA</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="camps">Blood Donation Camps Conducted:</label>
+            <p id="camps">15</p>
+        </div>
+
+        <div class="profile-info">
+            <label for="bio">Bio:</label>
+            <p id="bio">A dedicated hematologist with over 10 years of experience, passionate about blood donation and community health.</p>
+        </div>
+    </div>
+    <a href="fristpage.html" class="home-button">Back to Home</a>
+</body>
+</html>
+
+
+

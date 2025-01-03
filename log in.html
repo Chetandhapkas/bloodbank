@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cdb1b1;
+            background-image: url('https://www.shutterstock.com/image-illustration/3d-illustration-red-blood-cells-600nw-2155480365.jpg');
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
+
+        .login-form {
+            width: 90%; /* Responsive width */
+            max-width: 350px; /* Max width */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border: 1px solid #863030;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: white;
+        }
+
+        .login-form label {
+            color: white;
+        }
+        
+        .login-form input[type="text"], 
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #af32328d;
+            border-radius: 5px;
+        }
+
+        .login-form input[type="submit"], 
+        .button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .login-form input[type="submit"]:hover, 
+        .button:hover {
+            background-color: #000000dc;
+        }
+
+        .home-button {
+            position: fixed;
+            bottom: 20px; 
+            left: 20px; 
+            background-color: #f21111; 
+            color: rgb(15, 11, 11);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #edf8f8; 
+        }
+    </style>
+</head>
+<body>
+    <a href="fristpage.html" class="home-button">back to home</a>
+    
+    <div class="login-form"> 
+        <h2>LOG-IN</h2>
+        <form action="login.php" method="POST">
+            <label for="username"><b>USERNAME</b>:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password"><b>PASSWORD</b>:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <a href="user profile.html"class="button">Login</a>
+        </form>
+    </div>   
+</body>
+</html>

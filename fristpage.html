@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('first.jpeg') center / cover no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            background: linear-gradient(90deg, rgba(255, 7, 7, 0.622) 0%, rgba(218, 216, 71, 0.611) 100%);
+            padding: 15px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .header nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 0 10px;
+        }
+
+        .header nav a:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #ff0000ec;
+            margin: 30px 0; /* Adjusted margin for spacing */
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .signup-button {
+            position: absolute;
+            top: 300px; /* Adjust based on your header height */
+            right: 650px; /* Adjust for spacing from the right */
+            background-color: #d70000ba;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+
+        .signup-button:hover {
+            background-color: #000000;
+        }
+        .login-button {
+            position: absolute;
+            top: 300px; /* Adjust based on your header height */
+            right: 750px; /* Adjust for spacing from the right */
+            background-color: #d70000ba;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .login-button:hover {
+            background-color: #000000;
+        }
+        .donor-button {
+            position: absolute;
+            top: 730px; /* Adjust based on your header height */
+            right: 770px; /* Adjust for spacing from the right */
+            background-color: #d70000ba;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+
+        .donor-button:hover {
+            background-color: #000000;
+        }
+        .reciver-button {
+            position: absolute;
+            top: 730px; /* Adjust based on your header height */
+            right: 610px; /* Adjust for spacing from the right */
+            background-color: #d70000ba;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .reciver-button:hover {
+            background-color: #000000;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 120px; /* Space below the header */
+        }
+
+        .image-container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Full width */
+            height: 50vh; /* Height adjustable, currently set to 50% of the viewport height */
+            margin-top: 50px; /* Adjust space from the buttons */
+        }
+
+        .image-container1 img {
+            width: 80%; /* Adjust width as needed */
+            height: 100%; /* Fill the container height */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow */
+        }
+
+        .image-box {
+            width: 30%; /* Adjust width as needed */
+            text-align: center;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-box img {
+            width: 100%;  /* Full width of the container */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+
+        .image-box p {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+            margin: 0;
+        }
+        p {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="fristpage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="howtodonate.html">How To Donate</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div><br><br><br><br>
+    <h1>Mahatma Gandhi Institute of Medical Sciences Blood Bank. </h1>
+    <a href="signup.html"class="signup-button">sign-up</a>
+    <a href="log in.html"class="login-button">log-in</a>
+
+    <div class="image-container1">
+            <img src="https://media.istockphoto.com/id/537115731/photo/woman-donating-blood.jpg?s=612x612&w=0&k=20&c=VuzvsFPFL9ZJUyjVEikorykgWZsl5Vt9HBtJESmZi5c=" alt="Image 1">
+           </div>
+    <div class="image-container">
+
+        <a href="Donor form.html"class="donor-button">Donor Form </a>
+        <a href="Recivers.html"class="reciver-button">Recivers Form</a>
+
+        <div class="image-box">
+            <img src="https://img.etimg.com/thumb/width-420,height-315,imgsize-353228,resizemode-75,msid-76339286/magazines/panache/covid-19-doesnt-spread-through-blood-but-prospective-donors-must-maintain-hand-hygiene/blood-donation_istock.jpg" alt="Image 1">
+            <p><h3>IMPORTANCE OF BLOOD BANK</h3>
+                Blood banks are integral to modern healthcare, serving as repositories for blood and blood products that save countless lives.
+                They collect, test, process, and store donations from volunteer donors, ensuring that hospitals have immediate access to safe blood
+                for transfusions. These transfusions are critical for various medical situations, including surgeries, trauma care, and the treatment
+                of conditions like anemia or certain cancers. Blood banks also help maintain an adequate supply of diverse blood types, which is
+                essential for matching donors with patients. Their operations support emergency responses during disasters and aid in routine medical care, making them a cornerstone of effective healthcare systems.</p>
+        </div>
+        <div class="image-box">
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/06/14/08/blood-donor.jpg" alt="Image 2">
+            <p><h3>BLOOD DONATION PROCESS</h3>The blood donation process is designed to be safe, efficient, and comfortable for the donor. 
+                It begins with registration, where potential donors provide personal information and answer questions
+                about their medical history to determine eligibility. Following this, a health screening takes place, which includes 
+                checking vital signs and hemoglobin levels. If cleared, the actual donation occurs, typically taking about 10-15 minutes, 
+                during which approximately a pint of blood is collected. After donation, individuals are monitored for a short time to
+                ensure they feel well, often receiving refreshments to help replenish energy levels. This structured approach ensures a
+                positive experience, encouraging donors to return and support the vital needs of their communities.</p>
+        </div>
+        <div class="image-box">
+            <img src="https://img.freepik.com/premium-photo/scientist-is-giving-blood-sample-colleague-isolated-gray-wall_144962-13273.jpg" alt="Image 3">
+            <p><h3>Testing and Safety Protocols</h3>Once blood is collected, it undergoes comprehensive testing to guarantee its safety for transfusion.
+                This includes screening for infectious diseases such as HIV, hepatitis B and C, and syphilis, as well as determining blood type 
+                and Rh factor. Blood banks adhere to strict safety protocols to prevent contamination throughout the collection, processing, and
+                storage phases. By implementing advanced technologies and maintaining high standards, they ensure that all blood products are safe
+                and effective for patient use. These rigorous testing and safety measures not only protect patients but also enhance public trust 
+                in the blood donation process, encouraging more people to contribute and help save lives.</p>
+        </div>
+    </div>
+</body>
+</html>

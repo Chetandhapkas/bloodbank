@@ -1,0 +1,176 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration and Blood Donation Camps - Blood Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="file"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .home-button {
+            position: fixed;
+            bottom: 20px; 
+            left: 20px; 
+            background-color: #f21111; 
+            color: rgb(15, 11, 11);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #edf8f8; 
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .hospital-section {
+            display: none;
+        }
+        /* Styling for Blood Donation Camp Information Block */
+        .camp-info-block {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleHospitalField() {
+            const checkbox = document.getElementById('sameHospital');
+            const hospitalField = document.getElementById('hospitalField');
+            hospitalField.style.display = checkbox.checked ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Doctor Account</h2>
+    <form action="create_doctor_account.php" method="post" enctype="multipart/form-data">
+        <!-- Account Information Section -->
+        <h3>Account Information</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <!-- Personal Information Section -->
+        <h3>Personal Information</h3>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="doctor_name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="doctor_email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="doctor_phone" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="doctor_age" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="doctor_address" rows="4" required></textarea>
+
+        <!-- Medical Information Section -->
+        <h3>Medical Information</h3>
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" name="doctor_specialization" required>
+
+        <label for="experience">Years of Experience:</label>
+        <input type="number" id="experience" name="doctor_experience" min="0" required>
+
+        <label for="blood_type">Blood Type (if donating):</label>
+        <select id="blood_type" name="blood_type">
+            <option value="">Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+        </select>
+
+        <!-- Upload Medical Certificate -->
+        <label for="certificate">Upload MBBS Certificate (Medical Degree):</label>
+        <input type="file" id="certificate" name="mbbs_certificate" accept=".pdf, .jpg, .jpeg, .png" required>
+
+        <!-- Checkbox for Same Hospital -->
+        <label>
+            <input type="checkbox" id="sameHospital" onclick="toggleHospitalField()"> Doctor is from the same Blood Bank Hospital
+        </label>
+
+        <!-- Hospital Information Section -->
+        <div id="hospitalField" class="hospital-section">
+            <label for="hospital">Hospital Name:</label>
+            <input type="text" id="hospital" name="hospital_name">
+        </div>
+
+        <!-- Blood Donation Camps Information Section -->
+        <h3>Blood Donation Camps Information</h3>
+        <div class="camp-info-block">
+            <label for="camp_name">Camp Name:</label>
+            <input type="text" id="camp_name" name="camp_name" required>
+
+            <label for="camp_date">Date of Camp:</label>
+            <input type="date" id="camp_date" name="camp_date" required>
+
+            <label for="camp_location">Location:</label>
+            <input type="text" id="camp_location" name="camp_location" required>
+
+            <label for="participants">Number of Participants:</label>
+            <input type="number" id="participants" name="participants" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Create Account and Submit Camp Info</button>
+    </form>
+</div>
+<a href="fristpage.html" class="home-button">back to home</a>
+</body>
+</html>

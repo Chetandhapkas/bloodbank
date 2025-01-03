@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            background-color: white;
+            width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .block .left, 
+        .block .right {
+            width: 48%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ff5f6d;
+            outline: none;
+            background-color: #fff;
+        }
+
+        .form-group textarea {
+            height: 80px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #ff5f6d;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e14a52;
+        }
+
+        .line {
+            border-bottom: 2px solid #ddd;
+            margin: 30px 0;
+        }
+
+        .block-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .block-row .box {
+            width: 48%;
+        }
+
+        /* Show/Hide description for disease */
+        #diseaseDescription {
+            display: none;
+            margin-top: 15px;
+        }
+        .home-button {
+            position: fixed;
+            bottom: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            background-color: #f21111; /* Blue color for the button */
+            color: rgb(15, 11, 11);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #edf8f8; /* Darker blue on hover */
+        } 
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 90%;
+            }
+
+            .block,
+            .block-row {
+                flex-direction: column;
+            }
+
+            .block .left,
+            .block .right,
+            .block-row .box {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function toggleDiseaseDescription() {
+            var disease = document.getElementById("disease").value;
+            var description = document.getElementById("diseaseDescription");
+            if (disease === "Yes") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Donor Registration Form</h2>
+
+    <!-- Block 1: Name, Age, Address, Gender -->
+    <div class="block">
+        <div class="left">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Block 2: Upload Image, Contact, Email, OTP -->
+        <div class="right">
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="otp">OTP:</label>
+                <input type="text" id="otp" name="otp" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Block 3: Weight, Age in months, Disease -->
+    <div class="block-row">
+        <div class="box">
+            <div class="form-group">
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="ageInMonths">Perfect Age (in months):</label>
+                <input type="number" id="ageInMonths" name="ageInMonths" required>
+            </div>
+            <div class="form-group">
+                <label for="disease">Any Disease (Yes/No):</label>
+                <select id="disease" name="disease" onchange="toggleDiseaseDescription()" required>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div id="diseaseDescription" class="form-group">
+                <label for="diseaseDesc">Describe Disease:</label>
+                <textarea id="diseaseDesc" name="diseaseDesc" placeholder="Provide disease details here..."></textarea>
+            </div>
+        </div>
+
+        <!-- Block 4: HIV, Sugar, BP (Yes/No) -->
+        <div class="box">
+            <div class="form-group">
+                <label for="hiv">HIV (Yes/No):</label>
+                <select id="hiv" name="hiv" required>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sugar">Sugar (Yes/No):</label>
+                <select id="sugar" name="sugar" required>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bp">Blood Pressure (BP) (Yes/No):</label>
+                <select id="bp" name="bp" required>
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit">Submit</button>
+</div>
+<a href="fristpage.html" class="home-button">Back to Home</a>
+</body>
+</html>
